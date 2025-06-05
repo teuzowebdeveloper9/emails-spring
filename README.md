@@ -162,23 +162,3 @@ Configure application.properties with your RabbitMQ and email credentials.
 Run PostgreSQL and RabbitMQ (you can use Docker).
 
 Run the application:
-
-bash
-Copiar
-Editar
-./mvnw spring-boot:run
-🐳 Docker (Optional)
-If you want to run PostgreSQL and RabbitMQ via Docker:
-
-PostgreSQL
-bash
-Copiar
-Editar
-docker run --name postgres -e POSTGRES_PASSWORD=postgres -e POSTGRES_USER=postgres -e POSTGRES_DB=emails -p 5432:5432 -d postgres
-RabbitMQ
-bash
-Copiar
-Editar
-docker run -d --hostname my-rabbit --name rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq:3-management
-Then access RabbitMQ management: http://localhost:15672 (user: guest, pass: guest).
-
