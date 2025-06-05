@@ -16,7 +16,7 @@ import java.time.LocalDateTime;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class emailModel {
+public class EmailModel {
 
     private String emailID;
 
