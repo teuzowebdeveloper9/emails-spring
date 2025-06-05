@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class emailCosummer {
 
-    @RabbitListener
+    @RabbitListener(queues = "email-queue")
     public  void  ListenEmailQueue(@Payload String message){
 
         System.out.println(message);

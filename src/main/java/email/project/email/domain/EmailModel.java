@@ -2,14 +2,13 @@ package email.project.email.domain;
 
 
 import email.project.email.enums.EmailStatus;
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
+import java.util.UUID;
 
 @Entity
 @Table(name = "emails")
@@ -18,7 +17,9 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 public class EmailModel {
 
-    private String emailID;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private UUID emailID;
 
     private String emailTo;
 
@@ -26,19 +27,17 @@ public class EmailModel {
 
     private  String emailSubject;
 
-    @Column(columnDefinition = "BODY")
+    @Column(columnDefinition = "TEXT")
     private String emailBody;
     private LocalDateTime createdAt;
     private EmailStatus statusEmail;
 
 
-
-
-    public String getEmailID() {
+    public UUID getEmailID() {
         return emailID;
     }
 
-    public void setEmailID(String emailID) {
+    public void setEmailID(UUID emailID) {
         this.emailID = emailID;
     }
 
