@@ -1,5 +1,8 @@
 # User Service Microservice
 
+This is the beta version of a project, please see its original code base in these two repositories
+
+
 ## 📄 Description
 
 This project is the first part of a microservices system. It is responsible for creating users and sending emails using the RabbitMQ messaging system. The database used is PostgreSQL.
