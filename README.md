@@ -4,6 +4,8 @@ This is the beta version of a project, please see its original code base in thes
 
 https://github.com/teuzowebdeveloper9/ms_user
 
+https://github.com/teuzowebdeveloper9/ms_email
+
 
 ## 📄 Description
 
